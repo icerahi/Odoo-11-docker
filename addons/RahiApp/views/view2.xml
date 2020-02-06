@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+<!-- rahiapp2 tree view -->
+<record id='rahiapp2_tree_view' model='ir.ui.view'>
+    <field name='name'>rahiapp2.tree.view</field>
+    <field name='model'>rahiapp2</field>
+    <field name='arch' type='xml'>
+        <tree>
+             <field name='name'/>
+            <field name='date_of_birth'/>
+            <field name='active'/>
+             <field name='bio'/>
+            <field name='age'/>
+            <field name='salary'/>
+            <!-- <field name="register" t-options="{'format': 'dd / MM / yyyy HH / mm'}"/> -->
+            <field name='gender'/> 
+        </tree>
+    </field>
+</record>
+
+<!-- rahiapp2 form view -->
+<record id='rahiapp2_form_view' model='ir.ui.view'>
+    <field name='name'>rahiapp2.form.view</field>
+    <field name='model'>rahiapp2</field>
+    <field name='arch' type='xml'>
+        <form>
+        <group>
+          <field name='name'/>
+          <field name='email' />
+            <field name='date_of_birth'/>
+            <field name='active'/>
+             <field name='bio'/>
+            <field name='age'/>
+            <field name='salary'/>
+            <!-- <field name="register" t-options="{'format': 'dd / MM / yyyy HH / mm'}"/> -->
+            <field name='gender'/> 
+
+        </group>
+        </form>
+    </field>
+</record>
+
+
+<record id='rahiapp_view2_action' model='ir.actions.act_window'>
+    <field name='type'>ir.actions.act_window</field>
+    <field name='name'>Rahi APP View2 </field>
+    <field name='res_model'>rahiapp2</field>
+    <field name='view_mode'>tree,form</field>
+    <field name='help' type='html'>
+    <p class='oe_view_nocontent_create'> Click here to create new!</p>
+    </field>
+    
+</record>
+
+<menuitem id='rahiapp_new_topber' name='rahi new view'/>
+<menuitem id='rahiapp_new_sub_tober' parent='rahiapp_new_topber' name='Empolyee list'/>
+<menuitem id='rahiapp_odoo_team' parent='rahiapp_new_sub_tober' name='Odoo Team' action='rahiapp_view2_action'/>
+
+
+
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+
+<!-- Tree view of our RahiApp model-->
+<record id='rahiapp_tree_view' model='ir.ui.view'>
+    <field name='name'>rahiapp.tree.view</field>
+    <field name='model'>rahiapp</field>
+    <field name='arch' type='xml'>
+        <tree>
+            <field name='name'/>
+            <field name='date_of_birth'/>
+            <field name='active'/>
+             <field name='bio'/>
+            <field name='age'/>
+            <field name='salary'/>
+            <!-- <field name="register" t-options="{'format': 'dd / MM / yyyy HH / mm'}"/> -->
+            <field name='gender'/> 
+        </tree>
+    </field>
+</record>
+
+<!-- form view of rahiapp -->
+<record id='rahiapp_form_view' model='ir.ui.view'>
+    <field name='name'>rahiapp.form.view</field>
+    <field name='model'>rahiapp</field>
+    <field name='arch' type='xml'>
+        <form>
+        <group>
+            <field name='name' placeholder='Name' />
+            <field name='date_of_birth' placeholder='Date of Birth' />
+            <field name='active' placeholder='Active' />
+             <field name='bio' placeholder='BIO'/>
+            <field name='age' placeholder='Age'/>
+            <field name='salary' placeholder='Salary'/>
+            <!-- <field name="register" t-options="{'format': 'dd / MM / yyyy HH / mm'}"/> -->
+            <field name='gender' placeholder='Gender'/> 
+        </group>
+        </form>
+    </field>
+</record>
+
+ <!-- action of rahiapp-->
+<record id='rahiapp_action' model='ir.actions.act_window'>
+    <field name='type'>ir.actions.act_window</field>
+    <field name='name'> Rahi App Employee List </field>
+    <field name='res_model'>rahiapp</field>
+    <field name='view_mode'>tree,form</field>
+    <field name='help' type='html'>
+        <p class='oe_view_nocontent_create'>
+        Click Here To Create New!</p>
+    </field>
+ </record>
+
+ <menuitem name='Rahi App' id='rahiapp_top_menu' action='rahiapp_action' />
+</odoo>

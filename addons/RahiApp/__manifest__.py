@@ -12,7 +12,8 @@
     'base',
 ],
 'data': [
-'views/view.xml',
+'views/view2.xml',
+'views/view.xml'
 
 ],
 'installable': True,
