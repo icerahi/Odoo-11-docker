@@ -52,7 +52,7 @@
     
 </record>
 
-<menuitem id='rahiapp_new_topber' name='rahi new view'/>
+<menuitem id='rahiapp_new_topber' name='Extends RahiApp'/>
 <menuitem id='rahiapp_new_sub_tober' parent='rahiapp_new_topber' name='Empolyee list'/>
 <menuitem id='rahiapp_odoo_team' parent='rahiapp_new_sub_tober' name='Odoo Team' action='rahiapp_view2_action'/>
 

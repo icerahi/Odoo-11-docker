@@ -39,12 +39,35 @@
     </field>
 </record>
 
+
+<!-- rahiapp kanban view -->
+<record id='rahiapp_kanban_view' model='ir.ui.view'>
+    <field name='name'>rahiapp.kanban.view</field>
+    <field name='model'>rahiapp</field>
+    <field name='arch' type='xml'>
+        <kanban>
+        <templates>
+        <t t-name='kanban-box'>
+            <field name='name'/>
+            <field name='date_of_birth'/>
+            <field name='active'/>
+             <field name='bio'/>
+            <field name='age'/>
+            <field name='salary'/>
+            <!-- <field name="register" t-options="{'format': 'dd / MM / yyyy HH / mm'}"/> -->
+            <field name='gender'/> 
+        </t>
+        </templates>
+        </kanban>
+    </field>
+</record>
+
  <!-- action of rahiapp-->
 <record id='rahiapp_action' model='ir.actions.act_window'>
     <field name='type'>ir.actions.act_window</field>
     <field name='name'> Rahi App Employee List </field>
     <field name='res_model'>rahiapp</field>
-    <field name='view_mode'>tree,form</field>
+    <field name='view_mode'>kanban,tree,form</field>
     <field name='help' type='html'>
         <p class='oe_view_nocontent_create'>
         Click Here To Create New!</p>

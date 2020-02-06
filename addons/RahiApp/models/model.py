@@ -11,7 +11,6 @@ class RahiApp(models.Model):
     bio = fields.Text(string='About yourself')
     age = fields.Integer(string='Your Age')
     salary = fields.Float(string='Salary',digit=(6,2))
-    register = fields.Date.today()
     gender = fields.Selection([('male','Male'),('female','Female'),('other','Other')])
 
 class RahiApp2(models.Model):
